@@ -9,27 +9,31 @@
 
 <body>
     <div class="box" id="heading">
-        <h1>
-            <%= day %>
-        </h1>
+        <h1>Today</h1>
+        <h1><%= day %></h1>
     </div>
 
     <div class="box">
 
         <% for(var i=0; i<newItems.length; i++){ %>
-            <div class="item">
-                <input type="checkbox">
-                <p>
-                    <%= newItems[i] %>
-                </p>
-            </div>
-            <%}%>
+            <form method="post" action="/delete">
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value=<%=newItems[i]._id%> onchange="this.form.submit()">
+                    <p>
+                        <%= newItems[i].name %>
+                    </p>
+                </div>
+            </form>
+        <%}%>
 
                 <form class="item" method="post" action="/">
                     <input type="text" name="newItem" placeholder="New Item">
                     <button type="submit" name="button">+</button>
                 </form>
 
+    </div>
+    <div class="foot">
+        <p>Made with ❤️ using Node JS</p>
     </div>
 
 </body>
