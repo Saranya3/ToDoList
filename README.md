@@ -13,7 +13,9 @@ A web application built with Node.js ,Express and EJS templates. Database used h
 - Go to the location where project is downloaded in your terminal.
 - Download all the dependencies(npm, express,body parser,mongodb).
 
+```
 > npm install
+```
 
 **Project Look**
 ![alt text](https://github.com/Saranya3/ToDoList/blob/master/ss1.png)
